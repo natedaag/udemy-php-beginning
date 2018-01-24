@@ -1,13 +1,155 @@
+<?php   
+    //$name = "Nate";
+    //echo $name."<br>";
 
-<html>
-<head>
-<meta charset="UTF-8">
-<title>PHP 01</title>
-</head>
-<body>
-	hi
-</body>
-</html>
-<?php
-echo "Helloworld";
+    $emailTo = "natedaage@yahoo.com";
+    $subject = "I hope this works.";
+    $body = "here it is!";
+    $headers = " From: nate@nate.com";
+
+    if(mail($emailTo, $subject, $body, $headers)){
+        echo "the email was sent.";
+    } else{
+        "email failed.";
+    }
+    
+    /* POST VARIABLES
+    if($_POST){
+        $names = array("Nate", "Rachael", "Melissa", "Sarah", "Henry");
+        $isKnown = false;
+        for ($i = 0; $i < sizeof($names); $i++){
+            if($names[$i] == $_POST['name']){
+                $isKnown = true;
+            }
+        }
+        if($isKnown) {
+            echo "Hi".$_POST['name']."!";
+        } else {
+            echo "Who are you again?";
+        }
+    }
+    */
+    
+    
+    /* GET VARIABLE
+    if(is_numeric($_GET['number']) && 
+            $_GET['number'] > 0 && 
+            $_GET['number'] == round($_GET['number'], 0)){
+        $i = 2;
+        $isPrime = true;
+        while($i < $_GET['number']){
+            if($_GET['number'] % $i == 0){
+                $isPrime = false;
+            }
+            $i++;
+        }
+        if ($isPrime) {
+            echo "<p>".$i." is a prime number.</p>";
+        }else{
+            echo "<p>".$i." is not a prime number.</p>";
+        }
+    } else if ($_GET) {
+        echo "<p>Please enter a positive whole number.</p>";
+    }*/
+
+    /*
+    // winning-app-com.stackstaging.com/?name=nate&password=1234&gender=male
+    print_r($_GET);
+    echo $_GET["gender"];*/
+
+    /* WHILE LOOPS
+    $foods = array("yogurt", "cheese", "barbecue", "pizza");
+    $i = 0;
+    while ($i < sizeof($foods)){
+        echo $foods[$i]."<br>";
+        $i++;
+    }
+
+    $i = 1;
+    while($i < 10){
+        $j = $i * 5;
+        echo $j."<br>";
+        $i++;
+    }
+
+    $k = 5;
+    while ($k <= 50){
+        echo $k."<br>";
+        $k += 5;
+    }*/
+
+    /* FOR LOOPS
+    $family = array("Nate", "Melissa", "Sarah", "Henry");
+    foreach($family as $key => $value){
+        $family[$key] = $value." Gilman";
+        echo "Array item ".$key." is ".$value."<br>";
+    }
+    for($i = 0; $i < sizeof($family); $i++){
+        echo $family[$i]."<br>";
+    } */
+    
+      
+    /* VARIABLES
+    $name = "<p>Nate </p>";
+    $string1 = "<p>this is the first part</p>";
+    $string2 = "<p>of a sentence</p>";
+    echo $name;
+    echo $string1." ".$string2;
+    $myNumber = 45;
+    $calculation = $myNumber * 31 / 97 * 4;
+    echo "The result is ".$calculation;
+    $myBool = true;
+    echo"<p>this true? ".$myBool."</p>";
+    $variableName = "name";
+    echo $variableName; */
+
+    /* ARRAYS
+    $myArray = array("Nate", "Melissa", "Sarah", "Henry");
+    $myArray[] = "Katie";
+    print_r($myArray);
+    echo $myArray[3];
+    echo"<br><br>";
+    $anotherArray[0] = "pizza";
+    $anotherArray[1] = "yogurt";
+    $anotherArray[5] = "coffee";
+    $anotherArray["myFavoriteFood"] = "ice cream";
+    print_r($anotherArray);
+    
+    echo"<br><br>";
+    $thirdArray = array("France" => "French", 
+                        "USA" => "English", 
+                        "Germany" => "German", 
+                        "Spain" => "Spanish");
+    unset($thirdArray["Spain"]);
+    print_r($thirdArray);
+    echo sizeof($thirdArray);
+    */
+
+    /* IF STATEMENTS
+    $user = "Nate";
+    $age = 18;
+    if ($user == "Nate") {
+        echo "Hello, Nate!";
+        echo "<br><br>";
+    } else {
+        echo "Who are you?";
+        echo "<br><br>";
+    }
+    
+    if ($user == "Nate" && $age >= 18) {
+        echo "Enter";
+        echo "<br><br>";
+    } else {
+        echo "Sorry, youngun - you can't come in.";
+        echo "<br><br>";
+    }
+    */
 ?>
+
+
+<!--<form method="post">
+    <p>Please enter a name</p>
+    <p><input type="text" name="name"></p>
+    <p><input type="submit" value="Submit"></p>
+</form> -->
+
